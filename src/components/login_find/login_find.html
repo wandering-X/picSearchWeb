@@ -1,0 +1,18 @@
+<div ng-controller="loginFindCtrl" class="login-find">
+	<div class="login-box login-find-box">
+		<h1>找回密码</h1>
+		<form>
+			<input type="password" class="input-off">
+			<input type="text" name="username" class="username" placeholder="手机号码" ng-model="mobile" ng-change="isDisabled1();isDisabled2()" required>
+			<input type="password" name="password" class="password" placeholder="新密码" ng-model="newPassword" ng-change="isDisabled2()">
+			<input type="password" name="password" class="password" placeholder="确认密码" ng-model="confirmPassword" ng-change="isDisabled2()">
+			<input type="text" name="code" class="code" placeholder="验证码" ng-model="messageCode" ng-change="isDisabled2()">
+			<button class="sendCode" ng-click="checkCode()" ng-class="{'true':'disabled','false':''}[disabled1]" ng-disabled="disabled1">{{codeTimer}}</button>
+			<div class="login-btn">
+                <button type="submit" ng-click="loginFind()" ng-class="{'true':'disabled','false':''}[disabled2]" ng-disabled="disabled2">提交</button>
+                <span us-spinner spinner-theme="white1" spinner-on="showSpinner"></span>
+            </div>
+			<p>{{codeErrorMsg}}</p>
+		</form>
+	</div>
+</div>

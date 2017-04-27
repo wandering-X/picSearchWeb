@@ -1,0 +1,21 @@
+.login-find-box{
+    height: 435px;
+}
+
+button.sendCode{
+    width: 160px;
+    line-height: 42px;
+    margin-left: 31px;
+}
+
+input.input-off{
+	position: absolute;
+	top: -999px;
+}
+
+input.code{
+    width: 76px;
+    float: left;
+}
+
+

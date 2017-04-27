@@ -1,0 +1,16 @@
+<div class="page-container">
+    <div class="login-box login-find-box" ng-controller="resetCtrl" style="height: 370px;">
+        <h1>修改密码</h1>
+        <form>
+            <input type="password" class="input-off">
+            <input type="password" name="password" class="password" placeholder="原密码" ng-model="password" ng-change="isDisabled()" required>
+            <input type="password" name="password" class="password" placeholder="新密码" ng-model="newPassword" ng-change="isDisabled()" required>
+            <input type="password" name="password" class="password" placeholder="确认新密码" ng-model="comfirmPassword" ng-change="isDisabled()" required>
+            <div class="login-btn">
+                <button type="submit" ng-click="userReset()" ng-class="{'true':'disabled','false':''}[disabled]" ng-disabled="disabled">提交</button>
+                <span us-spinner spinner-theme="white" spinner-on="showSpinner"></span>
+            </div>
+        </form>
+        <p>{{errorMsg}}</p>
+    </div>
+</div>

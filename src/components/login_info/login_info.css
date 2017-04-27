@@ -1,0 +1,27 @@
+.login-div{
+	width: 200px;
+	float: left;
+    color: #000;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.login-div p{
+	margin: 0;
+}
+
+.login-info a{
+	padding: 5px;
+	color: #000;
+	text-decoration: none;
+	border: 1px solid rgba(0,0,0,0);
+}
+
+.login-info a:hover{
+	border: 1px solid #24abe2;
+}
+
+.login-info-right{
+	float: right;
+	margin-right: 20px;
+}

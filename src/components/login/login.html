@@ -1,0 +1,19 @@
+﻿<div class="page-container">
+    <div class="login-box" ng-controller="loginCtrl">
+        <h1>登录</h1>
+        <form method="post">
+            <input type="text" name="username" class="username" placeholder="手机号" ng-model="loginname" ng-change="isDisabled()" required>
+            <input type="password" name="password" class="password" placeholder="密码" ng-model="loginpsd" ng-change="isDisabled()" required>
+            <div class="login-btn">
+                <button type="submit" ng-click="userLogin()" ng-class="{'true':'disabled','false':''}[disabled]" ng-disabled="disabled">登录</button>
+                <span us-spinner spinner-theme="white" spinner-on="showSpinner"></span>
+            </div>
+        </form>
+        <div class="forgetpsd">
+            <a href="javascript:void(0);" class="register-link" ng-click="openRegister()">注册</a>
+            <span>&#124</span>
+            <a href="javascript:void(0);" ng-click="openLoginFind()">忘记密码？</a>
+        </div>
+        <p>{{errorMsg}}</p>
+    </div>
+</div>
